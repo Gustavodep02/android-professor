@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="41dp"
+        android:text="@string/autor"
+        app:layout_constraintBottom_toTopOf="@+id/etNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="28dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etMatricula"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etMatricula"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="37dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/matricula"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etIdade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNome" />
+
+    <EditText
+        android:id="@+id/etIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="51dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/idade"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rgTipo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMatricula" />
+
+    <RadioGroup
+        android:id="@+id/rgTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/etAnosHoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdade">
+
+        <RadioButton
+            android:id="@+id/rbHorista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profHorista" />
+
+        <RadioButton
+            android:id="@+id/rbTitular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profTitular" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAnosHoras"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="40dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/etHorasAula"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etSalarioValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgTipo" />
+
+    <EditText
+        android:id="@+id/etSalarioValor"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="27dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/etValorHA"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAnosHoras" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:text="@string/btnCalc"
+        app:layout_constraintBottom_toTopOf="@+id/tvSaida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSalarioValor" />
+
+    <TextView
+        android:id="@+id/tvSaida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

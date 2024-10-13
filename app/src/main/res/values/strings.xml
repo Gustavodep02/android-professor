@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Professor</string>
+    <string name="autor">Gustavo de Paula 1110482313003</string>
+    <string name="nome">Nome</string>
+    <string name="matricula">Matricula</string>
+    <string name="idade">Idade</string>
+    <string name="profHorista">Professor Horista</string>
+    <string name="profTitular">Professor Titular</string>
+    <string name="etHorasAula">Horas Trabalhadas</string>
+    <string name="etValorHA">Valor Hora Aula</string>
+    <string name="etAnos">Anos na instituição</string>
+    <string name="salario">Salario</string>
+    <string name="btnCalc">Calcular</string>
+    <string name="saida">R$</string>
+</resources>
